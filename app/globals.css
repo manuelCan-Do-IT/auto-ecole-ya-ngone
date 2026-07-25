@@ -189,23 +189,24 @@ p { color: var(--ink-muted); line-height: 1.72; }
 .documents-section { background: white; }
 .documents-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 84px; align-items: center; }
 .documents-intro > p { font-size: 1.03rem; }
-.photo-callout { display: flex; align-items: center; gap: 16px; margin-top: 30px; padding: 18px; background: var(--pale-yellow); border: 1px solid var(--yellow-border); border-radius: var(--radius-surface); }
+.photo-callout { display: flex; align-items: center; gap: 18px; margin-top: 30px; padding: 20px 24px; background: var(--white); border: 1.5px solid var(--navy); border-radius: var(--radius-surface); box-shadow: 0 8px 24px -6px rgba(11, 17, 33, 0.08); }
 .photo-callout > div { display: flex; flex-direction: column; }
-.photo-icon { display: grid; flex: 0 0 auto; place-items: center; width: 28px; height: 46px; color: var(--navy); }
-.photo-icon svg { width: 22px; height: 22px; }
-.photo-callout strong { font-size: 1.25rem; }
-.photo-callout span { margin-top: 4px; color: var(--yellow-ink); font-size: .88rem; }
-.documents-panel { padding: 34px; background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius-surface); }
-.profile-tabs { display: flex; gap: 8px; padding: 6px; background: white; border: 1px solid var(--line); border-radius: var(--radius-surface); }
-.profile-tabs button { flex: 1; min-height: 45px; padding: 8px; color: var(--ink-muted); background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius-control); font-size: .8rem; font-weight: 700; cursor: pointer; }
-.profile-tabs button[aria-selected="true"] { color: white; background: var(--navy); }
-.document-list { display: grid; gap: 0; margin: 25px 0 20px; padding: 0; list-style: none; }
-.document-list li { display: flex; align-items: flex-start; gap: 13px; padding: 15px 4px; border-bottom: 1px solid var(--line-soft); line-height: 1.45; }
-.document-list li span { display: grid; flex: 0 0 auto; place-items: center; width: 23px; height: 23px; color: var(--success); }
-.document-list li span svg { width: 19px; height: 19px; }
+.photo-icon { display: grid; flex: 0 0 auto; place-items: center; width: 32px; height: 32px; color: var(--navy); background: transparent; }
+.photo-icon svg { width: 24px; height: 24px; color: var(--navy); }
+.photo-callout strong { font-size: 1.15rem; font-weight: 700; color: var(--navy); }
+.photo-callout span { margin-top: 3px; color: #1e293b; font-size: .88rem; font-weight: 500; }
+.documents-panel { padding: 34px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-surface); box-shadow: 0 12px 36px -8px rgba(6, 21, 50, 0.08); }
+.profile-tabs { display: flex; gap: 8px; padding: 6px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-surface); }
+.profile-tabs button { flex: 1; min-height: 44px; padding: 8px 12px; color: var(--navy); background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-control); font-size: .88rem; font-weight: 700; cursor: pointer; transition: background var(--motion-fast) ease, color var(--motion-fast) ease, border-color var(--motion-fast) ease; }
+.profile-tabs button:hover { color: var(--white); background: var(--navy); border-color: var(--navy); }
+.profile-tabs button[aria-selected="true"] { color: var(--white); background: var(--navy); border-color: var(--navy); font-weight: 800; box-shadow: 0 4px 14px rgba(11, 17, 33, 0.25); }
+.document-list { display: grid; gap: 0; margin: 24px 0 20px; padding: 0; list-style: none; }
+.document-list li { display: flex; align-items: flex-start; gap: 14px; padding: 14px 4px; border-bottom: 1px solid var(--line-soft); font-size: .95rem; font-weight: 500; color: #0f172a; line-height: 1.45; }
+.document-list li span { display: grid; flex: 0 0 auto; place-items: center; width: 22px; height: 22px; color: var(--success); background: transparent; border-radius: 0; }
+.document-list li span svg { width: 20px; height: 20px; stroke-width: 2.2; }
 .document-list li.extra-document { color: var(--yellow-ink-strong); background: var(--pale-yellow); border: 0; border-radius: var(--radius-control); padding-inline: 12px; }
-.document-list li.extra-document span { color: var(--navy); }
-.panel-note { margin: 0; font-size: .76rem; }
+.document-list li.extra-document span { color: var(--navy); background: transparent; }
+.panel-note { margin: 0; font-size: .78rem; color: #475569; }
 
 .steps-section { background: var(--cream); }
 .steps-grid { display: grid; grid-template-columns: repeat(4,1fr); position: relative; }
