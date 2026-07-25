@@ -59,9 +59,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     name: "Auto école Ya Ngoné",
     url: siteUrl,
     logo: `${siteUrl}/images/logo/png/logo-symbole-transparent-512.png`,
-    image: `${siteUrl}/images/hero-driving.png`,
-    telephone: ["+221775461718", "+221777003816"],
-    email: "yangonendiaye85@yahoo.com",
+    telephone: ["+221782933733"],
+    email: "mawdondiaye432@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Cité Avion, Ouakam",
