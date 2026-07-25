@@ -10,16 +10,16 @@
   --yellow: #fdef42;
   --yellow-strong: #e8d900;
   --yellow-hover: #fff56b;
-  --yellow-ink: #6d5930;
-  --yellow-ink-strong: #754d00;
-  --yellow-link: #806f00;
+  --yellow-ink: #5e4600;
+  --yellow-ink-strong: #6d5200;
+  --yellow-link: #6d5200;
   --yellow-border: #e5db65;
   --cream: #fff9ec;
   --white: #ffffff;
-  --ink-muted: #596579;
-  --ink-body: #47596a;
-  --ink-body-strong: #34495b;
-  --ink-placeholder: #7a8495;
+  --ink-muted: #1e293b;
+  --ink-body: #0f172a;
+  --ink-body-strong: #0b1121;
+  --ink-placeholder: #475569;
   --line: #d8dee8;
   --line-soft: #e4e1da;
   --image-placeholder: #d8d4cb;
@@ -112,9 +112,9 @@ p { color: var(--ink-muted); line-height: 1.72; }
 .trust-icon { display: grid; flex: 0 0 auto; place-items: center; width: 44px; height: 44px; color: var(--navy); background: var(--cream); border-radius: var(--radius-control); }
 .trust-icon svg { width: 22px; height: 22px; color: var(--navy); }
 .trust-strip strong, .trust-strip small { display: block; }
-.trust-strip small { margin-bottom: 4px; color: var(--yellow-ink-strong); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-.trust-strip strong { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
-.trust-strip p { margin: 3px 0 0; font-size: .8rem; line-height: 1.4; color: var(--ink-muted); }
+.trust-strip small { margin-bottom: 4px; color: var(--yellow-ink-strong); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.trust-strip strong { font-size: 1.08rem; font-weight: 700; color: var(--navy); }
+.trust-strip p { margin: 3px 0 0; font-size: .84rem; line-height: 1.4; color: #162032; font-weight: 500; }
 
 .intro-section { background: white; }
 .intro-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 110px; align-items: start; }
