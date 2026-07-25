@@ -78,6 +78,8 @@ p { color: var(--ink-muted); line-height: 1.72; }
 .main-nav { position: relative; display: flex; justify-content: space-between; align-items: center; min-height: 88px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-barlow-condensed), var(--font-barlow), Arial, sans-serif; font-size: 1.22rem; font-weight: 700; letter-spacing: -.015em; }
 .brand-mark { display: grid; place-items: center; width: 43px; height: 43px; color: white; background: var(--navy); border-radius: var(--radius-control); }
+.brand-logo { height: 54px; width: auto; max-width: 250px; object-fit: contain; display: block; transition: transform var(--motion-fast) ease; }
+.brand:hover .brand-logo { transform: scale(1.02); }
 .nav-links { display: flex; align-items: center; gap: 22px; font-size: .9rem; font-weight: 620; }
 .nav-links > a:not(.nav-cta) { position: relative; padding: 34px 0; }
 .nav-links > a:not(.nav-cta)::after { position: absolute; bottom: 25px; left: 0; width: 0; height: 3px; content: ""; background: var(--yellow); transition: width var(--motion-base) ease; }
@@ -290,6 +292,7 @@ footer { padding: 0 0 24px; color: white; background: var(--navy-deep); border-t
 .footer-cta-actions a:first-child { color: var(--navy); background: var(--yellow); border-color: var(--yellow); }
 .footer-grid { display: grid; grid-template-columns: 1.45fr .72fr .9fr 1.05fr; gap: 54px; padding-top: 56px; }
 .footer-brand .brand-mark { color: var(--navy); background: var(--yellow); }
+.footer-brand .brand-logo { height: 58px; max-width: 260px; }
 .footer-about p { max-width: 350px; margin: 20px 0 18px; }
 .footer-address { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,.72); font-size: .84rem; }
 .footer-address svg { color: var(--yellow); }
@@ -481,6 +484,8 @@ footer { padding: 0 0 24px; color: white; background: var(--navy-deep); border-t
   .main-nav { min-height: 72px; }
   .brand { font-size: 1.02rem; }
   .brand-mark { width: 38px; height: 38px; border-radius: var(--radius-control); }
+  .brand-logo { height: 42px; max-width: 190px; }
+  .footer-brand .brand-logo { height: 46px; max-width: 200px; }
   .menu-toggle { display: block; }
   .nav-links { position: absolute; top: 67px; left: 0; right: 0; display: none; align-items: stretch; padding: 8px; background: white; border: 1px solid var(--line); border-radius: var(--radius-surface); }
   .nav-links.is-open { display: flex; flex-direction: column; }

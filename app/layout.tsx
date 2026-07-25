@@ -39,7 +39,17 @@ export const metadata: Metadata = {
     images: ["/images/hero-driving.png"],
   },
   other: { "codex-preview": "development" },
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -48,6 +58,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@type": "DrivingSchool",
     name: "Auto école Ya Ngoné",
     url: siteUrl,
+    logo: `${siteUrl}/images/logo/png/logo-symbole-transparent-512.png`,
+    image: `${siteUrl}/images/hero-driving.png`,
     telephone: ["+221775461718", "+221777003816"],
     email: "yangonendiaye85@yahoo.com",
     address: {

@@ -66,8 +66,13 @@ export default function Home() {
         </div>
         <nav className="container main-nav" aria-label="Navigation principale">
           <a className="brand" href="#accueil" onClick={closeMenu} aria-label="Auto école Ya Ngoné, accueil">
-            <span className="brand-mark">Y</span>
-            <span>Auto école Ya Ngoné</span>
+            <img
+              src="/images/logo/svg/logo-horizontal.svg"
+              alt="Auto école Ya Ngoné"
+              className="brand-logo"
+              width={220}
+              height={60}
+            />
           </a>
           <button
             className="menu-toggle"
@@ -386,7 +391,15 @@ export default function Home() {
         </div>
         <div className="container footer-grid">
           <div className="footer-about">
-            <a className="brand footer-brand" href="#accueil"><span className="brand-mark">Y</span><span>Auto école Ya Ngoné</span></a>
+            <a className="brand footer-brand" href="#accueil" aria-label="Auto école Ya Ngoné, accueil">
+              <img
+                src="/images/logo/svg/logo-horizontal-inverse.svg"
+                alt="Auto école Ya Ngoné"
+                className="brand-logo footer-logo"
+                width={220}
+                height={60}
+              />
+            </a>
             <p>Une auto-école de proximité pour préparer les permis B, C et D à Ouakam.</p>
             <span className="footer-address"><MapPin aria-hidden="true" /> Cité Avion, Ouakam — Dakar</span>
           </div>
