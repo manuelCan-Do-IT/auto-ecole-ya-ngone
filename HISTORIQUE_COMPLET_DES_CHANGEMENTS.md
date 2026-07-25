@@ -6,6 +6,14 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 
 ## 1. Mises à jour & Renforcement du Design System
 
+### 📞 Coordonnées officielles uniques & Indicatif pays `+221`
+* **Numéro officiel unique (WhatsApp & Téléphone)** : **`+221 78 293 37 33`**
+  * Suppression de tous les anciens numéros secondaires (`77 546 17 18`, `77 700 38 16`).
+  * **Intégration systématique de l'indicatif `+221`** devant chaque mention textuelle du numéro sur tout le site (barre d'utilité, section préinscription, cartes de contact, footer et pages d'actualités).
+  * **Épuration de la barre supérieure (`utility-bar`)** : Suppression du préfixe textuel *"WhatsApp :"* pour n'afficher que l'icône SVG WhatsApp suivie directement du numéro `+221 78 293 37 33`.
+* **Adresse e-mail officielle unique** : **`mawdondiaye432@gmail.com`**
+  * Remplacement de l'ancienne adresse e-mail sur tout le site, y compris dans le footer, la section de contact et les métadonnées SEO Schema JSON-LD (`layout.tsx`).
+
 ### 🚫 Règle 28 — Interdiction des pastilles et arrière-plans sous les icônes
 * **Règle originale** : *« Les icônes automatiquement enfermées dans une pastille colorée sont INTERDITES. »*
 * **Mise en œuvre systémique** :
@@ -42,7 +50,7 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 ## 2. Catalogue détaillé des modifications par section
 
 ### A. Navigation & En-tête (`site-header`, `utility-bar`, `main-nav`)
-* **Barre d'utilité** : Alignement centré des coordonnées sur mobile sans débordement horizontal.
+* **Barre d'utilité** : Affichage épuré des coordonnées avec indicatif `+221 78 293 37 33` et icône WhatsApp pure sans préfixe textuel *"WhatsApp :"*.
 * **Menu Mobile Drawer** : Hauteur de l'en-tête responsive (68px), shadow nette (`0 12px 32px rgba(0,0,0,0.15)`), liens tactiles à 44px minimum et bouton CTA d'action pleine largeur.
 
 ### B. Section Hero (`#accueil`)
@@ -104,10 +112,12 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 * **Carte d'Adresse (`.address-card`)** : Calage visuel exact sur l'esthétique du bouton secondaire *« Ouvrir l'itinéraire »* (`background: var(--navy-soft); border: 1px solid var(--navy-border-strong); border-radius: var(--radius-control)`).
 
 ### L. Section Formulaire de Préinscription (`#preinscription`)
+* **Mise à jour des coordonnées** : Numéro unique `+221 78 293 37 33` et e-mail `mawdondiaye432@gmail.com`.
 * **Suppression de la bande jaune** : Passage du fond `.contact-section` de `var(--yellow)` à `var(--cream)` pour éliminer la bande jaune de 96px qui apparaissait au-dessus du footer.
 * **Formulaire responsive** : Champs en 100% de largeur sur mobile avec focus accessible.
 
 ### M. Pied de page (Footer)
+* **Mise à jour des coordonnées** : `+221 78 293 37 33` et `mawdondiaye432@gmail.com`.
 * **Suppression du trait jaune** : Retrait du `border-top: 8px solid var(--yellow)` au-dessus du footer pour une continuité visuelle sombre.
 
 ---
@@ -116,6 +126,7 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 
 | Catégorie | Type | Description du changement | Portée |
 |---|---|---|---|
+| **Coordonnées** | **Systématique** | Numéro unique `+221 78 293 37 33` et e-mail `mawdondiaye432@gmail.com` | Globale (Toutes les sections, SEO & Chrome) |
 | **Design System** | **Systématique** | Règle 28 : Suppression de tous les fond/pastilles sous les icônes | Globale (Toutes les sections) |
 | **Design System** | **Systématique** | Règle 23 & 164 : Interdiction des emojis $\rightarrow$ Remplacement par SVG Lucide | Globale (Toutes les sections) |
 | **Design System** | **Systématique** | Suppression du pseudo-élément double trait `::after` sur `.eyebrow` | Globale |
@@ -134,5 +145,7 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 
 * `app/globals.css` : Tokens, règles anti-slop, styles de composants, media queries mobiles.
 * `app/page.tsx` : Structure JSX des sections, gestion des icônes Lucide, en-têtes et formulaires.
+* `app/layout.tsx` : Métadonnées SEO et schéma JSON-LD DrivingSchool.
+* `app/components/EditorialChrome.tsx` : En-tête et pied de page du blog/conseils.
 * `app/site-content.ts` : Données du site (horaires réels, étapes, pièces, tarifs, FAQ).
 * `DESIGN_SYSTEM_AUTO_ECOLE_YA_NGONE_V1.md` : Référentiel du Design System mis à jour.
