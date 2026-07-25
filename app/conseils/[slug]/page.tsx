@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ArticleCard } from "../../components/ArticleCard";
+import { ArticleTableOfContents } from "../../components/ArticleTableOfContents";
 import { EditorialFooter, EditorialHeader } from "../../components/EditorialChrome";
 import { editorialArticles, getArticle } from "../../editorial-content";
 import { siteUrl } from "../../site-url";
@@ -71,11 +72,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
         </header>
         <div className="container article-layout">
-          <aside className="article-aside">
-            <span>Dans ce guide</span>
-            <ol>{article.sections.map((section) => <li key={section.heading}><a href={`#${section.heading.toLocaleLowerCase("fr").replace(/[^a-z0-9]+/g, "-")}`}>{section.heading}</a></li>)}</ol>
-            <Link className="button button-primary" href="/#preinscription">Poser une question <ArrowRight aria-hidden="true" /></Link>
-          </aside>
+          <ArticleTableOfContents sections={article.sections} />
           <div className="article-body">
             {article.sections.map((section) => {
               const id = section.heading.toLocaleLowerCase("fr").replace(/[^a-z0-9]+/g, "-");

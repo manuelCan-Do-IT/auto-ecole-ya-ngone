@@ -30,6 +30,7 @@ Sont interdits :
 - valeurs de couleurs, rayons ou espacements inventées dans un composant ;
 - menus, champs et sélecteurs laissés dans leur apparence brute par défaut ;
 - mélanges de bibliothèques ou de styles d’icônes ;
+- bandes verticales d’accentuation à gauche (`border-left` coloré) sur les cartes, liens ou éléments actifs ;
 - textes vagues, faux compteurs et informations inventées présentées comme réelles.
 
 ## 3. Identité

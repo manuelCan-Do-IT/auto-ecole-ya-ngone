@@ -6,6 +6,15 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 
 ## 1. Mises à jour & Renforcement du Design System
 
+### 🚫 Règle Anti-AI-Slop — Interdiction stricte des bandes d'accentuation à gauche (`border-left` coloré)
+* **Nouvelle règle stricte** : *« Les bandes d'accentuation verticales à gauche (`border-left` coloré) sur les cartes, listes ou éléments actifs sont STRICTEMENT INTERDITES. »*
+* **Mise en œuvre** : Suppression intégrale de la bordure gauche sur l'élément actif du sommaire `ArticleTableOfContents.tsx`. L'état actif est désormais exprimé sous forme de **pilule jaune pure pleine** (`background: var(--yellow); color: var(--navy); font-weight: 750; border-radius: var(--radius-control)`), sans aucune fioriture de bordure latérale.
+
+### 📌 Indicateur dynamique de section (« Scrollspy ») dans le sommaire d'article (`ArticleTableOfContents.tsx`)
+* **Détection automatique au défilement** : Création d'un composant interactif réactif (`IntersectionObserver`) qui détecte la section actuellement lue à l'écran.
+* **Mise en valeur visuelle de l'élément actif** : La section en cours de lecture dans le sommaire "DANS CE GUIDE" s'illumine automatiquement sous forme de pilule jaune vive (`var(--yellow)`) avec texte bleu nuit en gras.
+* **Navigation fluide (Smooth scroll)** : Clic sur une section du sommaire déclenchant un défilement doux directement vers le titre ciblé.
+
 ### 🟡 Harmonisation globale des boutons d'action d'articles (`.article-btn`)
 * **Changement** : Généralisation du bouton pilule d'action jaune vif (`.article-btn`) à **TOUTES les cartes d'articles du site**, y compris la page de catalogue d'actualités `/conseils` (`ArticleCard.tsx`) et les suggestions en bas d'article.
 * **Résultat** : Unification visuelle 100% cohérente entre la page d'accueil, le catalogue d'articles et les fiches individuelles.
@@ -104,6 +113,7 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 * **Accordion** : Animations d'ouverture fluides avec icônes `Plus` et `Minus`.
 
 ### J. Section Conseils & Actualités (Articles Éditoriaux)
+* **Sommaire interactif (« Scrollspy »)** : Composant `<ArticleTableOfContents />` avec surlignage dynamique sous forme de pilule jaune sans aucun `border-left`.
 * **Bouton d'action unifié (`.article-btn`)** : Bouton pilule d'action jaune vif (`var(--yellow)`) généralisé à toutes les cartes d'articles.
 * **Header d'article immersif** : Cover photo intégrée en fond d'en-tête de l'article avec filtre sombre et suppression du pavé photo central.
 
@@ -130,6 +140,8 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 
 | Catégorie | Type | Description du changement | Portée |
 |---|---|---|---|
+| **Design System** | **Systématique** | Interdiction absolue du `border-left` coloré sur les cartes et listes | Globale |
+| **Composant UX** | Refonte | Sommaire interactif (`ArticleTableOfContents`) avec surlignage pilule jaune au défilement | Section `/conseils/[slug]` |
 | **Composant UI** | **Systématique** | Uniformisation des boutons « Lire l'article » en pilule jaune (`.article-btn`) | Globale (Accueil, /conseils, fiches) |
 | **Ergonomie UX** | Refonte | Article Hero : Photo en fond d'en-tête et retrait de l'image centrale encombrante | Section `/conseils/[slug]` |
 | **Coordonnées** | **Systématique** | Numéro unique `+221 78 293 37 33` et e-mail `mawdondiaye432@gmail.com` | Globale (Toutes les sections, SEO & Chrome) |
@@ -148,7 +160,6 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 
 ## 4. Fichiers impactés
 
-* `app/components/ArticleCard.tsx` : Passage du lien « Lire l'article » au composant bouton `.article-btn`.
-* `app/conseils/[slug]/page.tsx` : Background image dynamique sur `.article-hero` et suppression de `.article-cover`.
-* `app/globals.css` : Styles `.article-hero`, masquage de `.article-cover` et ajustement de `.article-layout`.
+* `DESIGN_SYSTEM_AUTO_ECOLE_YA_NGONE_V1.md` : Ajout de la règle anti-slop d'interdiction de `border-left`.
+* `app/globals.css` : Suppression de `border-left` et passage de l'élément actif à la pilule jaune pure (`background: var(--yellow)`).
 * `HISTORIQUE_COMPLET_DES_CHANGEMENTS.md` : Journal de bord exhaustif à jour.
