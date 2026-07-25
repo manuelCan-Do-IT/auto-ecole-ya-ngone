@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   BadgeCheck,
+  BookOpen,
   Camera,
   CarFront,
   Check,
@@ -335,7 +336,7 @@ export default function Home() {
                 <p>{article.readingTime}</p>
                 <h3><Link href={`/conseils/${article.slug}`}>{article.title}</Link></h3>
                 <p>{article.excerpt}</p>
-                <Link className="text-link" href={`/conseils/${article.slug}`}>Lire le conseil <ArrowRight aria-hidden="true" /></Link>
+                <Link className="article-btn" href={`/conseils/${article.slug}`}>Lire l’article <ArrowRight aria-hidden="true" /></Link>
               </div>
             </article>
           ))}
@@ -393,9 +394,16 @@ export default function Home() {
             <p>Auto école Ya Ngoné vous accueille à Cité Avion, Ouakam, Dakar. Avant votre première visite, vous pouvez nous écrire sur WhatsApp pour recevoir un repère précis et confirmer votre venue.</p>
             <div className="address-card"><span className="location-icon"><MapPin aria-hidden="true" /></span><div><small>Adresse</small><strong>Cité Avion, Ouakam</strong><span>Dakar, Sénégal</span></div></div>
             <div className="schedule-card">
-              <div className="schedule-heading"><Clock3 aria-hidden="true" /><strong>Horaires d’ouverture</strong></div>
-              {siteContent.schedule.map((item) => <div className="schedule-row" key={item.days}><span>{item.days}</span><strong>{item.hours}</strong></div>)}
-              <p>Les séances de conduite sont organisées sur planning.</p>
+              <div className="schedule-heading"><Clock3 aria-hidden="true" /><strong>Horaires & Organisation</strong></div>
+              <div className="schedule-group">
+                <div className="schedule-module-title"><BookOpen aria-hidden="true" /><span>Cours Théoriques (Code de la route)</span></div>
+                <div className="schedule-row"><span>Lundi, Mardi, Jeudi, Vendredi</span><strong>08h00 – 12h00 & 15h30 – 19h00</strong></div>
+              </div>
+              <div className="schedule-group">
+                <div className="schedule-module-title"><CarFront aria-hidden="true" /><span>Conduite Pratique</span></div>
+                <div className="schedule-row"><span>Mercredi & Samedi</span><strong>Sur planning / rendez-vous</strong></div>
+              </div>
+              <div className="schedule-row schedule-closed"><span>Dimanche</span><strong>Fermé</strong></div>
             </div>
             <a className="button button-secondary" href="https://www.google.com/maps/search/?api=1&query=Cit%C3%A9+Avion+Ouakam+Dakar" target="_blank" rel="noreferrer">Ouvrir l’itinéraire <ArrowRight aria-hidden="true" /></a>
           </div>

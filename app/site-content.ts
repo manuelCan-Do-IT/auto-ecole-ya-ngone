@@ -38,8 +38,8 @@ export const siteContent = {
     { title: "Confirmer l’inscription", description: "Validez les conditions, le planning et le démarrage directement avec l’auto-école." },
   ],
   schedule: [
-    { days: "Lundi – vendredi", hours: "08h00 – 19h00" },
-    { days: "Samedi", hours: "08h00 – 18h00" },
+    { days: "Cours Théoriques (Code)", hours: "Lun, Mar, Jeu, Ven : 08h00–12h00 & 15h30–19h00" },
+    { days: "Conduite Pratique", hours: "Mercredi & Samedi (sur planning)" },
     { days: "Dimanche", hours: "Fermé" },
   ],
   testimonials: [
