@@ -165,8 +165,11 @@ export default function Home() {
         <div className="container permit-grid">
           {siteContent.permits.map((permit) => (
             <article className="permit-card" key={permit.code}>
-              <span className="permit-code">{permit.code}</span>
-              <div>
+              <div className="permit-header-photo">
+                <img src={permit.image} alt={permit.title} />
+                <span className="permit-code">{permit.code}</span>
+              </div>
+              <div className="permit-body">
                 <p className="permit-kicker">{permit.label}</p>
                 <h3>{permit.title}</h3>
                 <p>{permit.description}</p>

@@ -155,13 +155,18 @@ p { color: var(--ink-muted); line-height: 1.72; }
 .formations-section p { color: rgba(255,255,255,.66); }
 .split-heading { display: grid; grid-template-columns: 1.4fr .6fr; gap: 100px; align-items: end; margin-bottom: 54px; }
 .split-heading h2 { max-width: 760px; margin: 0; }
-.permit-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-.permit-card { min-height: 390px; padding: 30px; background: var(--navy); border: 1px solid var(--navy-border); border-radius: var(--radius-surface); transition: border-color var(--motion-base) ease; }
-.permit-card:hover, .permit-card:focus-within { border-color: var(--yellow); }
-.permit-code { display: grid; place-items: center; width: 74px; height: 74px; margin-bottom: 84px; color: var(--navy); background: var(--yellow); border-radius: var(--radius-control); font-size: 2rem; font-weight: 800; }
-.permit-kicker { margin: 0 0 8px; color: var(--yellow) !important; font-size: .75rem; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
-.permit-card h3 { margin-bottom: 10px; font-size: 1.65rem; }
-.permit-card a, .text-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; color: var(--yellow); font-weight: 720; }
+.permit-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+.permit-card { overflow: hidden; display: flex; flex-direction: column; min-height: auto; padding: 0; background: var(--navy-soft); border: 1px solid var(--navy-border); border-radius: var(--radius-surface); transition: border-color var(--motion-base) ease, transform var(--motion-fast) ease, box-shadow var(--motion-fast) ease; }
+.permit-card:hover, .permit-card:focus-within { border-color: var(--yellow); transform: translateY(-4px); box-shadow: 0 16px 38px -8px rgba(0, 0, 0, 0.4); }
+.permit-header-photo { position: relative; width: 100%; height: 200px; margin: 0; padding: 0; overflow: hidden; background: var(--navy-deep); }
+.permit-header-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 0; transition: transform var(--motion-base) ease; }
+.permit-card:hover .permit-header-photo img { transform: scale(1.04); }
+.permit-header-photo .permit-code { position: absolute; left: 16px; bottom: 16px; z-index: 3; display: grid; place-items: center; width: 46px; height: 46px; margin: 0; color: var(--navy); background: var(--yellow); border-radius: var(--radius-control); font-size: 1.45rem; font-weight: 800; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35); }
+.permit-body { display: flex; flex-direction: column; flex: 1; padding: 24px 24px 24px; }
+.permit-kicker { margin: 0 0 6px; color: var(--yellow) !important; font-size: .75rem; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+.permit-card h3 { margin-bottom: 8px; font-size: 1.45rem; color: white; }
+.permit-card p { margin-bottom: 16px; color: rgba(255, 255, 255, 0.82); font-size: .92rem; line-height: 1.5; }
+.permit-card a, .text-link { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; color: var(--yellow); font-weight: 720; }
 
 .pricing-section { background: var(--cream); }
 .section-heading { margin-bottom: 52px; }
@@ -515,7 +520,6 @@ footer { padding: 0 0 24px; color: white; background: var(--navy-deep); border-t
   .map-shell, .map-shell iframe { min-height: 470px; height: 470px; }
   .permit-card:last-child { grid-column: auto; }
   .permit-card { min-height: auto; }
-  .permit-code { margin-bottom: 45px; }
   .pricing-note { flex-direction: column; gap: 7px; }
   .documents-panel { padding: 20px; }
   .profile-tabs { flex-direction: column; }

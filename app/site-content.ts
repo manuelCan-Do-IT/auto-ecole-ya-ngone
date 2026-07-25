@@ -13,9 +13,9 @@ export const siteContent = {
     { title: "Une auto-école proche de vous", description: "Retrouvez-nous à Cité Avion, Ouakam, et contactez-nous directement par téléphone ou WhatsApp.", image: "/images/benefit-3.png" },
   ],
   permits: [
-    { code: "B", label: "Véhicule léger", title: "Permis B", description: "La catégorie destinée à la conduite des voitures particulières et véhicules légers." },
-    { code: "C", label: "Véhicule de transport", title: "Permis C", description: "Une formation orientée vers la conduite des véhicules lourds, selon les conditions applicables." },
-    { code: "D", label: "Transport de personnes", title: "Permis D", description: "La catégorie liée au transport de personnes, proposée dans une formule combinée avec le permis C." },
+    { code: "B", label: "Véhicule léger", title: "Permis B", description: "La catégorie destinée à la conduite des voitures particulières et véhicules légers.", image: "/images/permit-b.png" },
+    { code: "C", label: "Véhicule de transport", title: "Permis C", description: "Une formation orientée vers la conduite des véhicules lourds, selon les conditions applicables.", image: "/images/permit-c.png" },
+    { code: "D", label: "Transport de personnes", title: "Permis D", description: "La catégorie liée au transport de personnes, proposée dans une formule combinée avec le permis C.", image: "/images/permit-d.png" },
   ],
   prices: [
     { name: "Permis B", amount: "130 000", note: "Formule pour préparer la catégorie B.", featured: false, installment: false },
