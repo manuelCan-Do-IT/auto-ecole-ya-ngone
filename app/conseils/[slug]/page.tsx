@@ -60,7 +60,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <header
           className="article-hero"
           style={{
-            backgroundImage: `linear-gradient(rgba(11, 17, 33, 0.86), rgba(11, 17, 33, 0.94)), url("${article.image}")`,
+            backgroundImage: `url("${article.image}")`,
           }}
         >
           <div className="container article-hero-copy">
