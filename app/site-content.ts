@@ -8,9 +8,9 @@ export const siteContent = {
     { label: "Conseils", href: "/conseils" },
   ],
   benefits: [
-    { title: "Un suivi à taille humaine", description: "Échangez avec le même interlocuteur pour comprendre votre parcours et avancer à votre rythme." },
-    { title: "Des démarches plus simples", description: "Préparez votre dossier avec une liste claire des pièces adaptées à votre situation." },
-    { title: "Une auto-école proche de vous", description: "Retrouvez-nous à Cité Avion, Ouakam, et contactez-nous directement par téléphone ou WhatsApp." },
+    { title: "Un suivi à taille humaine", description: "Échangez avec le même interlocuteur pour comprendre votre parcours et avancer à votre rythme.", image: "/images/benefit-1.png" },
+    { title: "Des démarches plus simples", description: "Préparez votre dossier avec une liste claire des pièces adaptées à votre situation.", image: "/images/benefit-2.png" },
+    { title: "Une auto-école proche de vous", description: "Retrouvez-nous à Cité Avion, Ouakam, et contactez-nous directement par téléphone ou WhatsApp.", image: "/images/benefit-3.png" },
   ],
   permits: [
     { code: "B", label: "Véhicule léger", title: "Permis B", description: "La catégorie destinée à la conduite des voitures particulières et véhicules légers." },

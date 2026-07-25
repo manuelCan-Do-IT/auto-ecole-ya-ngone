@@ -138,11 +138,17 @@ export default function Home() {
               src="https://images.pexels.com/photos/9518018/pexels-photo-9518018.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Un accompagnateur explique les commandes d’un véhicule à un jeune conducteur"
             />
-            <figcaption><strong>Un accompagnement humain</strong><span>Des réponses utiles avant même votre première séance.</span></figcaption>
+            <figcaption><strong>Pédagogie & Présence Humaine</strong><span>Des explications simples et un accompagnement rassurant à chaque étape.</span></figcaption>
           </figure>
           <div className="benefit-list">
           {siteContent.benefits.map((benefit, index) => (
-            <article className="benefit-card" key={benefit.title}>
+            <article
+              className="benefit-card"
+              key={benefit.title}
+              style={{
+                backgroundImage: `linear-gradient(to top, rgba(7, 22, 36, 0.94) 0%, rgba(7, 22, 36, 0.78) 60%, rgba(7, 22, 36, 0.52) 100%), url(${benefit.image})`,
+              }}
+            >
               <span className="card-number">0{index + 1}</span>
               <div><h3>{benefit.title}</h3><p>{benefit.description}</p></div>
             </article>
