@@ -4,17 +4,21 @@ import { FormEvent, useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
+  BadgeCheck,
   Camera,
   CarFront,
   Check,
   ChevronDown,
   Clock3,
   FileCheck2,
+  FileText,
   Mail,
   MapPin,
   Menu,
   MessageCircle,
+  MessageSquare,
   Minus,
+  MousePointerClick,
   Phone,
   Plus,
   Quote,
@@ -225,15 +229,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section steps-section">
+      <section className="section steps-section" id="demarche">
         <div className="container section-heading centered-heading">
           <p className="eyebrow">Comment commencer ?</p>
           <h2>Quatre étapes pour lancer votre démarche.</h2>
         </div>
         <div className="container steps-grid">
           {siteContent.steps.map((step, index) => (
-            <article key={step.title}>
-              <span>{index + 1}</span>
+            <article className="step-card" key={step.title}>
+              <div className="step-header">
+                <span className="step-number">0{index + 1}</span>
+                <div className="step-icon">
+                  {index === 0 && <MousePointerClick aria-hidden="true" />}
+                  {index === 1 && <MessageSquare aria-hidden="true" />}
+                  {index === 2 && <FileText aria-hidden="true" />}
+                  {index === 3 && <BadgeCheck aria-hidden="true" />}
+                </div>
+              </div>
               <h3>{step.title}</h3>
               <p>{step.description}</p>
             </article>
