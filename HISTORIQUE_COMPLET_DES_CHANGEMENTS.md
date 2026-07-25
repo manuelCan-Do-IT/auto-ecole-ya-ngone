@@ -6,6 +6,15 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 
 ## 1. Mises à jour & Renforcement du Design System
 
+### 🟡 Harmonisation globale des boutons d'action d'articles (`.article-btn`)
+* **Changement** : Généralisation du bouton pilule d'action jaune vif (`.article-btn`) à **TOUTES les cartes d'articles du site**, y compris la page de catalogue d'actualités `/conseils` (`ArticleCard.tsx`) et les suggestions en bas d'article.
+* **Résultat** : Unification visuelle 100% cohérente entre la page d'accueil, le catalogue d'articles et les fiches individuelles.
+
+### 🖼️ Redesign des en-têtes d'articles (`/conseils/[slug]`)
+* **Suppression de l'image géante encombrante** : Retrait définitif du pavé photo autonome (`.article-cover`) de 560px de hauteur qui bloquait le défilement vertical entre le titre et le corps du texte.
+* **Image en arrière-plan du Hero (`.article-hero`)** : L'image de l'article est désormais intégrée directement en arrière-plan du bloc de titre avec un overlay sombre immersif (`linear-gradient(rgba(11, 17, 33, 0.86), rgba(11, 17, 33, 0.94))`).
+* **Confort de lecture** : Une lisibilité optimale du texte en blanc et un enchaînement direct vers le corps de l'article sans obstacle visuel.
+
 ### 📞 Coordonnées officielles uniques & Indicatif pays `+221`
 * **Numéro officiel unique (WhatsApp & Téléphone)** : **`+221 78 293 37 33`**
   * Suppression de tous les anciens numéros secondaires (`77 546 17 18`, `77 700 38 16`).
@@ -39,11 +48,6 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 * **Mobile ($\le$ 720 px)** :
   * Les en-têtes de sections et sur-titres s'alignent à gauche (`text-align: left`).
   * **Correction de conteneur majeure** : Correction du bogue où `.centered-heading` écrasait `margin-inline: auto` du `.container`. Les titres s'alignent désormais au millimètre près sur la marge exacte des cartes de contenu, sans jamais toucher le bord de l'écran à 0px.
-
-### 🗂️ Onglets de Profil (`profile-tabs`)
-* **Fond du conteneur** : Blanc pur (`var(--white)`) avec bordure fine (`var(--line)`).
-* **Onglets inactifs** : Fond blanc avec bordure fine et texte bleu nuit.
-* **Onglet actif (`aria-selected="true"`) & Survol** : Bleu nuit officiel de la marque (`var(--navy)` `#0B1121`) avec texte blanc pur, éliminant tout effet de survol flou ou grisâtre.
 
 ---
 
@@ -100,8 +104,8 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 * **Accordion** : Animations d'ouverture fluides avec icônes `Plus` et `Minus`.
 
 ### J. Section Conseils & Actualités (Articles Éditoriaux)
-* **Libellé du lien** : Passage de *"Lire le conseil"* à **« Lire l’article »**.
-* **Design de bouton affirmé** : Transformation du simple lien textuel en **bouton pilule d'action dynamique** (`.article-btn` en fond `var(--yellow)` et texte `var(--navy)`).
+* **Bouton d'action unifié (`.article-btn`)** : Bouton pilule d'action jaune vif (`var(--yellow)`) généralisé à toutes les cartes d'articles.
+* **Header d'article immersif** : Cover photo intégrée en fond d'en-tête de l'article avec filtre sombre et suppression du pavé photo central.
 
 ### K. Section Nous Trouver & Horaires (`#contact`)
 * **Vrais horaires de l'auto-école** : Structuration en 2 modules distincts (Code Théorique vs Conduite Pratique) :
@@ -126,6 +130,8 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 
 | Catégorie | Type | Description du changement | Portée |
 |---|---|---|---|
+| **Composant UI** | **Systématique** | Uniformisation des boutons « Lire l'article » en pilule jaune (`.article-btn`) | Globale (Accueil, /conseils, fiches) |
+| **Ergonomie UX** | Refonte | Article Hero : Photo en fond d'en-tête et retrait de l'image centrale encombrante | Section `/conseils/[slug]` |
 | **Coordonnées** | **Systématique** | Numéro unique `+221 78 293 37 33` et e-mail `mawdondiaye432@gmail.com` | Globale (Toutes les sections, SEO & Chrome) |
 | **Design System** | **Systématique** | Règle 28 : Suppression de tous les fond/pastilles sous les icônes | Globale (Toutes les sections) |
 | **Design System** | **Systématique** | Règle 23 & 164 : Interdiction des emojis $\rightarrow$ Remplacement par SVG Lucide | Globale (Toutes les sections) |
@@ -133,7 +139,6 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 | **Responsive UI** | **Systématique** | Regroupement des media-queries mobile ($\le$ 720px) avec réalignement des conteneurs | Globale |
 | **Composant UI** | Refonte | Stepper : Passage de la ligne filale à 4 cartes de processus avec icônes | Section `#demarche` |
 | **Composant UI** | Refonte | Onglets de profil : Fond blanc, onglet sélectionné bleu nuit `#0B1121` | Section `#dossier` |
-| **Composant UI** | Refonte | Articles éditoriaux : Bouton pilule d'action « Lire l'article » | Section Conseils |
 | **Composant UI** | Ajustement | Suppression du trou blanc dans `.price-card` (`min-height: auto`) | Section `#tarifs` |
 | **Contenu Métier** | Ajustement | Vrais horaires séparés Code Théorique vs Conduite Pratique | Section `#contact` |
 | **Correctif Visuel** | Correctif | Carte adresse calée sur le style du bouton itinéraire | Section `#contact` |
@@ -143,9 +148,7 @@ Ce document répertorie **l’intégralité des modifications, refontes UI/UX, c
 
 ## 4. Fichiers impactés
 
-* `app/globals.css` : Tokens, règles anti-slop, styles de composants, media queries mobiles.
-* `app/page.tsx` : Structure JSX des sections, gestion des icônes Lucide, en-têtes et formulaires.
-* `app/layout.tsx` : Métadonnées SEO et schéma JSON-LD DrivingSchool.
-* `app/components/EditorialChrome.tsx` : En-tête et pied de page du blog/conseils.
-* `app/site-content.ts` : Données du site (horaires réels, étapes, pièces, tarifs, FAQ).
-* `DESIGN_SYSTEM_AUTO_ECOLE_YA_NGONE_V1.md` : Référentiel du Design System mis à jour.
+* `app/components/ArticleCard.tsx` : Passage du lien « Lire l'article » au composant bouton `.article-btn`.
+* `app/conseils/[slug]/page.tsx` : Background image dynamique sur `.article-hero` et suppression de `.article-cover`.
+* `app/globals.css` : Styles `.article-hero`, masquage de `.article-cover` et ajustement de `.article-layout`.
+* `HISTORIQUE_COMPLET_DES_CHANGEMENTS.md` : Journal de bord exhaustif à jour.

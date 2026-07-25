@@ -397,17 +397,16 @@ footer { padding: 0 0 24px; color: white; background: var(--navy-deep); }
 .editorial-footer .footer-bottom a { display: inline-flex; align-items: center; gap: 8px; }
 
 /* Article detail */
-.article-hero { padding: 70px 0 150px; color: white; background: var(--navy); }
+.article-hero { position: relative; overflow: hidden; padding: 75px 0 85px; color: white; background-color: var(--navy); background-size: cover; background-position: center; }
 .article-hero .breadcrumb { margin-bottom: 48px; }
-.article-hero-copy { max-width: 1030px; }
+.article-hero-copy { position: relative; z-index: 2; max-width: 1030px; }
 .article-category { display: inline-flex; margin-bottom: 20px; padding: 8px 11px; color: var(--navy); background: var(--yellow); border-radius: var(--radius-control); font-size: .69rem; font-weight: 800; letter-spacing: .05em; }
 .article-hero h1 { max-width: 950px; font-size: clamp(3rem, 4.8vw, 4.5rem); }
-.article-hero-copy > p { max-width: 810px; color: rgba(255,255,255,.72); font-size: 1.14rem; }
-.article-byline { display: flex; flex-wrap: wrap; gap: 11px 24px; margin-top: 30px; color: rgba(255,255,255,.56); font-size: .77rem; }
+.article-hero-copy > p { max-width: 810px; color: rgba(255,255,255,.82); font-size: 1.14rem; }
+.article-byline { display: flex; flex-wrap: wrap; gap: 11px 24px; margin-top: 30px; color: rgba(255,255,255,.68); font-size: .77rem; }
 .article-byline strong { color: white; }
-.article-cover { position: relative; overflow: hidden; height: 560px; margin-top: -92px; border: 10px solid var(--cream); border-radius: var(--radius-surface); }
-.article-cover img { width: 100%; height: 100%; object-fit: cover; }
-.article-layout { display: grid; grid-template-columns: 260px minmax(0, 720px); justify-content: center; gap: 80px; padding-top: 92px; padding-bottom: 110px; }
+.article-cover { display: none; }
+.article-layout { display: grid; grid-template-columns: 260px minmax(0, 720px); justify-content: center; gap: 80px; padding-top: 56px; padding-bottom: 110px; }
 .article-aside { position: sticky; top: 25px; align-self: start; padding: 22px; background: white; border: 1px solid var(--line); border-radius: var(--radius-surface); }
 .article-aside > span { color: var(--yellow-link); font-size: .68rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
 .article-aside ol { display: grid; gap: 11px; margin: 18px 0 24px; padding-left: 22px; color: var(--ink-muted); font-size: .78rem; line-height: 1.45; }

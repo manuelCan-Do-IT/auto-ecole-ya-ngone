@@ -13,7 +13,7 @@ export function ArticleCard({ article }: { article: EditorialArticle }) {
         <p className="article-meta">{article.readingTime}</p>
         <h2><Link href={`/conseils/${article.slug}`}>{article.title}</Link></h2>
         <p>{article.excerpt}</p>
-        <Link className="text-link" href={`/conseils/${article.slug}`}>Lire l’article <ArrowRight aria-hidden="true" /></Link>
+        <Link className="article-btn" href={`/conseils/${article.slug}`}>Lire l’article <ArrowRight aria-hidden="true" /></Link>
       </div>
     </article>
   );

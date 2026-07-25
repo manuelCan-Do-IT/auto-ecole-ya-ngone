@@ -56,7 +56,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     <main className="editorial-page article-page">
       <EditorialHeader />
       <article>
-        <header className="article-hero">
+        <header
+          className="article-hero"
+          style={{
+            backgroundImage: `linear-gradient(rgba(11, 17, 33, 0.86), rgba(11, 17, 33, 0.94)), url("${article.image}")`,
+          }}
+        >
           <div className="container article-hero-copy">
             <nav className="breadcrumb" aria-label="Fil d’Ariane"><Link href="/">Accueil</Link><span>/</span><Link href="/conseils">Conseils</Link><span>/</span><span>{article.category}</span></nav>
             <span className="article-category">{article.category}</span>
@@ -65,7 +70,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <div className="article-byline"><strong>Auto école Ya Ngoné</strong><span>{article.readingTime}</span><span>Guide pratique</span></div>
           </div>
         </header>
-        <div className="container article-cover"><img src={article.image} alt={article.imageAlt} /></div>
         <div className="container article-layout">
           <aside className="article-aside">
             <span>Dans ce guide</span>
