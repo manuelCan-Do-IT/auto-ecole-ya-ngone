@@ -65,8 +65,8 @@ export default function Home() {
           <div className="container utility-inner">
             <span><MapPin aria-hidden="true" /> Cité Avion, Ouakam — Dakar</span>
             <div>
-              <a href="tel:+221782933733"><Phone aria-hidden="true" /> 78 293 37 33</a>
-              <a href="https://wa.me/221782933733" target="_blank" rel="noreferrer"><WhatsAppIcon /> 78 293 37 33</a>
+              <a href="tel:+221782933733"><Phone aria-hidden="true" /> +221 78 293 37 33</a>
+              <a href="https://wa.me/221782933733" target="_blank" rel="noreferrer"><WhatsAppIcon /> +221 78 293 37 33</a>
             </div>
           </div>
         </div>
@@ -350,7 +350,7 @@ export default function Home() {
             <h2>Parlons de votre projet de permis.</h2>
             <p>Remplissez ces quelques informations. Votre demande sera préparée puis ouverte dans WhatsApp afin que vous puissiez l’envoyer directement.</p>
             <div className="contact-details">
-              <a href="https://wa.me/221782933733" target="_blank" rel="noreferrer"><span className="contact-icon whatsapp-icon"><WhatsAppIcon /></span><span><small>WhatsApp & Téléphone</small>78 293 37 33</span></a>
+              <a href="https://wa.me/221782933733" target="_blank" rel="noreferrer"><span className="contact-icon whatsapp-icon"><WhatsAppIcon /></span><span><small>WhatsApp & Téléphone</small>+221 78 293 37 33</span></a>
               <a href="mailto:mawdondiaye432@gmail.com"><span className="contact-icon mail-icon"><Mail aria-hidden="true" /></span><span><small>E-mail</small>mawdondiaye432@gmail.com</span></a>
               <span><span className="contact-icon location-icon"><MapPin aria-hidden="true" /></span><span><small>Adresse</small>Cité Avion, Ouakam, Dakar</span></span>
             </div>
@@ -434,7 +434,7 @@ export default function Home() {
           </div>
           <div><strong>Formations</strong><a href="#formations">Permis B</a><a href="#formations">Permis C</a><a href="#formations">Permis D</a><a href="#tarifs">Voir les tarifs</a></div>
           <div><strong>Votre démarche</strong><a href="#inscription">Pièces à fournir</a><a href="#preinscription">Se préinscrire</a><a href="#faq">Questions fréquentes</a><Link href="/conseils">Conseils & actualités</Link><a href="#contact">Horaires et adresse</a></div>
-          <div><strong>Nous joindre</strong><a href="https://wa.me/221782933733" target="_blank" rel="noreferrer">78 293 37 33</a><a href="mailto:mawdondiaye432@gmail.com">mawdondiaye432@gmail.com</a></div>
+          <div><strong>Nous joindre</strong><a href="https://wa.me/221782933733" target="_blank" rel="noreferrer">+221 78 293 37 33</a><a href="mailto:mawdondiaye432@gmail.com">mawdondiaye432@gmail.com</a></div>
         </div>
         <div className="container footer-bottom"><span>© 2026 Auto école Ya Ngoné. Tous droits réservés.</span><span>Permis B · C · D — Ouakam, Dakar</span></div>
       </footer>

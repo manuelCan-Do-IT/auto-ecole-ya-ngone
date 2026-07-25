@@ -8,7 +8,7 @@ export function EditorialHeader() {
       <div className="utility-bar">
         <div className="container utility-inner">
           <span>Conseils pratiques pour les candidats au permis</span>
-          <div><a href="tel:+221782933733"><Phone aria-hidden="true" /> 78 293 37 33</a><a href="https://wa.me/221782933733" target="_blank" rel="noreferrer"><WhatsAppIcon /> 78 293 37 33</a></div>
+          <div><a href="tel:+221782933733"><Phone aria-hidden="true" /> +221 78 293 37 33</a><a href="https://wa.me/221782933733" target="_blank" rel="noreferrer"><WhatsAppIcon /> +221 78 293 37 33</a></div>
         </div>
       </div>
       <nav className="container main-nav" aria-label="Navigation principale">
@@ -61,7 +61,7 @@ export function EditorialFooter() {
         </div>
         <div><strong>Découvrir</strong><Link href="/#formations">Nos formations</Link><Link href="/#tarifs">Les tarifs</Link><Link href="/#inscription">Le dossier</Link></div>
         <div><strong>S’informer</strong><Link href="/conseils">Tous les conseils</Link><Link href="/conseils?categorie=Démarches">Démarches</Link><Link href="/conseils?categorie=Code%20de%20la%20route">Code de la route</Link></div>
-        <div><strong>Nous contacter</strong><a href="https://wa.me/221782933733">78 293 37 33</a><a href="mailto:mawdondiaye432@gmail.com">mawdondiaye432@gmail.com</a></div>
+        <div><strong>Nous contacter</strong><a href="https://wa.me/221782933733">+221 78 293 37 33</a><a href="mailto:mawdondiaye432@gmail.com">mawdondiaye432@gmail.com</a></div>
       </div>
       <div className="container footer-bottom"><span>© 2026 Auto école Ya Ngoné.</span><Link href="/">Retour au site principal <ArrowRight aria-hidden="true" /></Link></div>
     </footer>
