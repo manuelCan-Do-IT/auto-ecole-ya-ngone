@@ -20,6 +20,7 @@ import {
   Quote,
   X,
 } from "lucide-react";
+import { WhatsAppIcon } from "./components/WhatsAppIcon";
 import { siteContent } from "./site-content";
 import { featuredArticles } from "./editorial-content";
 
@@ -60,7 +61,7 @@ export default function Home() {
             <span><MapPin aria-hidden="true" /> Cité Avion, Ouakam — Dakar</span>
             <div>
               <a href="tel:+221775461718"><Phone aria-hidden="true" /> 77 546 17 18</a>
-              <a href="tel:+221777003816">77 700 38 16</a>
+              <a href="https://wa.me/221777003816" target="_blank" rel="noreferrer"><WhatsAppIcon /> 77 700 38 16</a>
             </div>
           </div>
         </div>
@@ -100,7 +101,7 @@ export default function Home() {
             <p className="hero-lead">Préparez les permis B, C et D au cœur de Ouakam, avec des informations claires à chaque étape.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#preinscription">Se préinscrire <ArrowRight aria-hidden="true" /></a>
-              <a className="button button-secondary" href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer"><MessageCircle aria-hidden="true" /> Écrire sur WhatsApp</a>
+              <a className="button button-secondary" href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer"><WhatsAppIcon /> Écrire sur WhatsApp</a>
             </div>
             <p className="microcopy">Une demande d’information ne vous engage à aucun paiement.</p>
           </div>
@@ -276,7 +277,7 @@ export default function Home() {
             <p className="eyebrow">Questions fréquentes</p>
             <h2>Les réponses avant de vous déplacer.</h2>
             <p>Vous ne trouvez pas votre réponse ? Écrivez directement sur WhatsApp.</p>
-            <a className="button button-secondary" href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer"><MessageCircle aria-hidden="true" /> Poser une question</a>
+            <a className="button button-secondary" href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer"><WhatsAppIcon /> Poser une question</a>
           </div>
           <div className="accordion">
             {siteContent.faq.map((item, index) => (
@@ -327,8 +328,8 @@ export default function Home() {
             <h2>Parlons de votre projet de permis.</h2>
             <p>Remplissez ces quelques informations. Votre demande sera préparée puis ouverte dans WhatsApp afin que vous puissiez l’envoyer directement.</p>
             <div className="contact-details">
-              <a href="https://wa.me/221775461718" target="_blank" rel="noreferrer"><span className="contact-icon whatsapp-icon"><MessageCircle aria-hidden="true" /></span><span><small>WhatsApp principal</small>77 546 17 18</span></a>
-              <a href="https://wa.me/221777003816" target="_blank" rel="noreferrer"><span className="contact-icon whatsapp-icon"><MessageCircle aria-hidden="true" /></span><span><small>Deuxième WhatsApp</small>77 700 38 16</span></a>
+              <a href="https://wa.me/221775461718" target="_blank" rel="noreferrer"><span className="contact-icon whatsapp-icon"><WhatsAppIcon /></span><span><small>WhatsApp principal</small>77 546 17 18</span></a>
+              <a href="https://wa.me/221777003816" target="_blank" rel="noreferrer"><span className="contact-icon whatsapp-icon"><WhatsAppIcon /></span><span><small>Deuxième WhatsApp</small>77 700 38 16</span></a>
               <a href="mailto:yangonendiaye85@yahoo.com"><span className="contact-icon mail-icon"><Mail aria-hidden="true" /></span><span><small>E-mail</small>yangonendiaye85@yahoo.com</span></a>
               <span><span className="contact-icon location-icon"><MapPin aria-hidden="true" /></span><span><small>Adresse</small>Cité Avion, Ouakam, Dakar</span></span>
             </div>
@@ -387,7 +388,7 @@ export default function Home() {
       <footer>
         <div className="container footer-cta">
           <div><span>Besoin d’une précision ?</span><strong>Votre projet de permis commence par une simple discussion.</strong></div>
-          <div className="footer-cta-actions"><a href="https://wa.me/221775461718" target="_blank" rel="noreferrer"><MessageCircle aria-hidden="true" /> Écrire sur WhatsApp</a><a href="tel:+221775461718"><Phone aria-hidden="true" /> Appeler maintenant</a></div>
+          <div className="footer-cta-actions"><a href="https://wa.me/221775461718" target="_blank" rel="noreferrer"><WhatsAppIcon /> Écrire sur WhatsApp</a><a href="tel:+221775461718"><Phone aria-hidden="true" /> Appeler maintenant</a></div>
         </div>
         <div className="container footer-grid">
           <div className="footer-about">

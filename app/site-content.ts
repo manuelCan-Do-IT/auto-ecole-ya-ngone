@@ -6,7 +6,6 @@ export const siteContent = {
     { label: "Dossier", href: "#inscription" },
     { label: "À propos", href: "#apropos" },
     { label: "Conseils", href: "/conseils" },
-    { label: "Contact", href: "#contact" },
   ],
   benefits: [
     { title: "Un suivi à taille humaine", description: "Échangez avec le même interlocuteur pour comprendre votre parcours et avancer à votre rythme." },

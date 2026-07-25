@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Menu, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Menu, Phone } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function EditorialHeader() {
   return (
@@ -7,7 +8,7 @@ export function EditorialHeader() {
       <div className="utility-bar">
         <div className="container utility-inner">
           <span>Conseils pratiques pour les candidats au permis</span>
-          <div><a href="tel:+221775461718"><Phone aria-hidden="true" /> 77 546 17 18</a><a href="https://wa.me/221777003816">WhatsApp : 77 700 38 16</a></div>
+          <div><a href="tel:+221775461718"><Phone aria-hidden="true" /> 77 546 17 18</a><a href="https://wa.me/221777003816" target="_blank" rel="noreferrer"><WhatsAppIcon /> WhatsApp : 77 700 38 16</a></div>
         </div>
       </div>
       <nav className="container main-nav" aria-label="Navigation principale">
@@ -21,15 +22,17 @@ export function EditorialHeader() {
           />
         </Link>
         <div className="editorial-desktop-nav">
+          <Link href="/">Accueil</Link>
           <Link href="/#formations">Formations</Link>
-          <Link href="/#inscription">Dossier</Link>
           <Link href="/#tarifs">Tarifs</Link>
+          <Link href="/#inscription">Dossier</Link>
+          <Link href="/#apropos">À propos</Link>
           <Link className="is-current" href="/conseils">Conseils</Link>
           <Link className="nav-cta" href="/#preinscription">Se préinscrire</Link>
         </div>
         <details className="editorial-menu">
           <summary aria-label="Ouvrir le menu"><Menu aria-hidden="true" /></summary>
-          <div><Link href="/">Accueil</Link><Link href="/#formations">Formations</Link><Link href="/#inscription">Dossier</Link><Link href="/#tarifs">Tarifs</Link><Link href="/conseils">Conseils</Link><Link href="/#preinscription">Se préinscrire</Link></div>
+          <div><Link href="/">Accueil</Link><Link href="/#formations">Formations</Link><Link href="/#tarifs">Tarifs</Link><Link href="/#inscription">Dossier</Link><Link href="/#apropos">À propos</Link><Link href="/conseils">Conseils</Link><Link href="/#preinscription">Se préinscrire</Link></div>
         </details>
       </nav>
     </header>
@@ -41,7 +44,7 @@ export function EditorialFooter() {
     <footer className="editorial-footer">
       <div className="container footer-cta">
         <div><span>Une question sur votre permis ?</span><strong>Échangez directement avec Auto école Ya Ngoné.</strong></div>
-        <div className="footer-cta-actions"><a href="https://wa.me/221775461718" target="_blank" rel="noreferrer"><MessageCircle aria-hidden="true" /> WhatsApp</a><a href="tel:+221775461718"><Phone aria-hidden="true" /> Appeler</a></div>
+        <div className="footer-cta-actions"><a href="https://wa.me/221775461718" target="_blank" rel="noreferrer"><WhatsAppIcon /> WhatsApp</a><a href="tel:+221775461718"><Phone aria-hidden="true" /> Appeler</a></div>
       </div>
       <div className="container editorial-footer-grid">
         <div>
