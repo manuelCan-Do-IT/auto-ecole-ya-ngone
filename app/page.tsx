@@ -59,7 +59,8 @@ export default function Home() {
         : [];
 
   return (
-    <main>
+    <main id="main-content">
+      <a href="#main-content" className="skip-link">Aller au contenu principal</a>
       <header className="site-header">
         <div className="utility-bar">
           <div className="container utility-inner">
