@@ -81,7 +81,7 @@ export default function Home() {
             />
           </a>
           <button
-            className="menu-toggle"
+            className={`menu-toggle ${menuOpen ? "is-active" : ""}`}
             type="button"
             aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={menuOpen}
