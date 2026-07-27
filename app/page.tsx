@@ -177,7 +177,7 @@ export default function Home() {
                 <p className="permit-kicker">{permit.label}</p>
                 <h3>{permit.title}</h3>
                 <p>{permit.description}</p>
-                <a href="#tarifs">Voir les formules <ArrowRight aria-hidden="true" /></a>
+                <a href="#tarifs">En savoir plus <ArrowRight aria-hidden="true" /></a>
               </div>
             </article>
           ))}
