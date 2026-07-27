@@ -147,14 +147,12 @@ export default function Home() {
           </figure>
           <div className="benefit-list">
           {siteContent.benefits.map((benefit, index) => (
-            <article
-              className="benefit-card"
-              key={benefit.title}
-              style={{
-                backgroundColor: "var(--navy)",
-                backgroundImage: `url(${benefit.image})`,
-              }}
-            >
+            <article className="benefit-card" key={benefit.title}>
+              <span
+                className="benefit-card-bg"
+                style={{ backgroundImage: `url(${benefit.image})` }}
+                aria-hidden="true"
+              />
               <span className="card-number">0{index + 1}</span>
               <div><h3>{benefit.title}</h3><p>{benefit.description}</p></div>
             </article>
