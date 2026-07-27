@@ -62,7 +62,6 @@ svg { width: 1.25em; height: 1.25em; flex: 0 0 auto; stroke-width: 2; }
 .container { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
 .section { padding: 96px 0; }
 .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; color: var(--yellow-link); font-size: .82rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-.eyebrow--signature::before { content: ""; display: inline-block; width: 24px; height: 3px; background: var(--yellow); border-radius: 2px; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 { font-family: var(--font-barlow-condensed), var(--font-barlow), Arial, sans-serif; }
 h1, h2 { letter-spacing: -.025em; }

@@ -101,7 +101,7 @@ export default function Home() {
       <section className="hero" id="accueil">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow eyebrow--signature">Auto-école à Ouakam</p>
+            <p className="eyebrow">Auto-école à Ouakam</p>
             <h1>Votre permis, avec un accompagnement de proximité.</h1>
             <p className="hero-lead">Préparez les permis B, C et D au cœur de Ouakam, avec des informations claires à chaque étape.</p>
             <div className="hero-actions">
@@ -163,7 +163,7 @@ export default function Home() {
 
       <section className="section formations-section" id="formations">
         <div className="container section-heading split-heading">
-          <div><p className="eyebrow eyebrow--signature">Nos formations</p><h2>Choisissez la catégorie qui correspond à votre projet.</h2></div>
+          <div><p className="eyebrow">Nos formations</p><h2>Choisissez la catégorie qui correspond à votre projet.</h2></div>
           <p>Les conditions d’accès et le contenu précis de chaque formule sont confirmés avec l’auto-école avant l’inscription.</p>
         </div>
         <div className="container permit-grid">
@@ -231,7 +231,7 @@ export default function Home() {
 
       <section className="section steps-section" id="demarche">
         <div className="container section-heading centered-heading">
-          <p className="eyebrow eyebrow--signature">Comment commencer ?</p>
+          <p className="eyebrow">Comment commencer ?</p>
           <h2>Quatre étapes pour lancer votre démarche.</h2>
         </div>
         <div className="container steps-grid">
