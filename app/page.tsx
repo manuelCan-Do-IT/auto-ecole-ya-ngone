@@ -416,7 +416,10 @@ export default function Home() {
       <footer>
         <div className="container footer-cta">
           <div><span>Besoin d’une précision ?</span><strong>Votre projet de permis commence par une simple discussion.</strong></div>
-          <div className="footer-cta-actions"><a href="https://wa.me/221782933733" target="_blank" rel="noreferrer"><WhatsAppIcon /> Écrire sur WhatsApp</a><a href="tel:+221782933733"><Phone aria-hidden="true" /> Appeler maintenant</a></div>
+          <div className="footer-cta-actions">
+            <a href="https://wa.me/221782933733" target="_blank" rel="noreferrer"><WhatsAppIcon /> Écrire sur WhatsApp</a>
+            <a href="tel:+221782933733"><Phone aria-hidden="true" /> Appeler maintenant</a>
+          </div>
         </div>
         <div className="container footer-grid">
           <div className="footer-about">
@@ -429,14 +432,28 @@ export default function Home() {
                 height={60}
               />
             </a>
-            <p>Une auto-école de proximité pour préparer les permis B, C et D à Ouakam.</p>
+            <p>Une auto-école de proximité pour préparer les permis B, C et D à Cité Avion, Ouakam.</p>
             <span className="footer-address"><MapPin aria-hidden="true" /> Cité Avion, Ouakam — Dakar</span>
           </div>
-          <div><strong>Formations</strong><a href="#formations">Permis B</a><a href="#formations">Permis C</a><a href="#formations">Permis D</a><a href="#tarifs">Voir les tarifs</a></div>
-          <div><strong>Votre démarche</strong><a href="#inscription">Pièces à fournir</a><a href="#preinscription">Se préinscrire</a><a href="#faq">Questions fréquentes</a><Link href="/conseils">Conseils & actualités</Link><a href="#contact">Horaires et adresse</a></div>
-          <div><strong>Nous joindre</strong><a href="https://wa.me/221782933733" target="_blank" rel="noreferrer">+221 78 293 37 33</a><a href="mailto:mawdondiaye432@gmail.com">mawdondiaye432@gmail.com</a></div>
+          <div>
+            <strong>Formations & Tarifs</strong>
+            <a href="#formations">Permis B (Véhicule léger)</a>
+            <a href="#formations">Permis C (Transport)</a>
+            <a href="#formations">Permis D (Transport de personnes)</a>
+            <a href="#tarifs">Grille des tarifs</a>
+          </div>
+          <div>
+            <strong>Informations & Démarches</strong>
+            <a href="#inscription">Pièces à fournir</a>
+            <a href="#preinscription">Préinscription en ligne</a>
+            <a href="#faq">Questions fréquentes</a>
+            <Link href="/conseils">Conseils & actualités</Link>
+          </div>
         </div>
-        <div className="container footer-bottom"><span>© 2026 Auto école Ya Ngoné. Tous droits réservés.</span><span>Permis B · C · D — Ouakam, Dakar</span></div>
+        <div className="container footer-bottom">
+          <span>© 2026 Auto école Ya Ngoné. Tous droits réservés.</span>
+          <span>Permis B · C · D — Ouakam, Dakar</span>
+        </div>
       </footer>
     </main>
   );
